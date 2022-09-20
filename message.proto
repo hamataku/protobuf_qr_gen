@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message WifiParams {
+bool advanced = 1;
+string ssid = 2;
+string passphrase = 3;
+bool dhcp = 4;
+}
+
+message AccessToken {
+string access_token = 1;
+}
