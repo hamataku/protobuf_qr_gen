@@ -5,8 +5,17 @@ bool advanced = 1;
 string ssid = 2;
 string passphrase = 3;
 bool dhcp = 4;
+string ip_addr = 5;
+string subnet = 6;
+string gateway = 7;
+string dns1 = 8;
+string dns2 = 9;
 }
 
 message AccessToken {
 string access_token = 1;
+}
+
+message ConnectionChange {
+string server = 1;
 }

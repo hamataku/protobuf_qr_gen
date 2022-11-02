@@ -3,9 +3,14 @@ import qrcode
 
 wifiParams = WifiParams()
 wifiParams.advanced = False
-wifiParams.ssid = "SSID"
-wifiParams.passphrase = "Password"
+wifiParams.ssid = "aillis-mobile"
+wifiParams.passphrase = "GMFfgdug_/iS"
 wifiParams.dhcp = True
+wifiParams.ip_addr = ""
+wifiParams.subnet = ""
+wifiParams.gateway = ""
+wifiParams.dns1 = ""
+wifiParams.dns2 = ""
 
 img = qrcode.make(wifiParams.SerializeToString())
 img.save("wifiParams.png")

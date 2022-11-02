@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rmessage.proto\"N\n\nWifiParams\x12\x10\n\x08\x61\x64vanced\x18\x01 \x01(\x08\x12\x0c\n\x04ssid\x18\x02 \x01(\t\x12\x12\n\npassphrase\x18\x03 \x01(\t\x12\x0c\n\x04\x64hcp\x18\x04 \x01(\x08\"#\n\x0b\x41\x63\x63\x65ssToken\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n\rmessage.proto\"\x9c\x01\n\nWifiParams\x12\x10\n\x08\x61\x64vanced\x18\x01 \x01(\x08\x12\x0c\n\x04ssid\x18\x02 \x01(\t\x12\x12\n\npassphrase\x18\x03 \x01(\t\x12\x0c\n\x04\x64hcp\x18\x04 \x01(\x08\x12\x0f\n\x07ip_addr\x18\x05 \x01(\t\x12\x0e\n\x06subnet\x18\x06 \x01(\t\x12\x0f\n\x07gateway\x18\x07 \x01(\t\x12\x0c\n\x04\x64ns1\x18\x08 \x01(\t\x12\x0c\n\x04\x64ns2\x18\t \x01(\t\"#\n\x0b\x41\x63\x63\x65ssToken\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\"\"\n\x10\x43onnectionChange\x12\x0e\n\x06server\x18\x01 \x01(\tb\x06proto3')
 )
 
 
@@ -60,6 +60,41 @@ _WIFIPARAMS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ip_addr', full_name='WifiParams.ip_addr', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='subnet', full_name='WifiParams.subnet', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='gateway', full_name='WifiParams.gateway', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dns1', full_name='WifiParams.dns1', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dns2', full_name='WifiParams.dns2', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -72,8 +107,8 @@ _WIFIPARAMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17,
-  serialized_end=95,
+  serialized_start=18,
+  serialized_end=174,
 )
 
 
@@ -103,12 +138,44 @@ _ACCESSTOKEN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=97,
-  serialized_end=132,
+  serialized_start=176,
+  serialized_end=211,
+)
+
+
+_CONNECTIONCHANGE = _descriptor.Descriptor(
+  name='ConnectionChange',
+  full_name='ConnectionChange',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='server', full_name='ConnectionChange.server', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=213,
+  serialized_end=247,
 )
 
 DESCRIPTOR.message_types_by_name['WifiParams'] = _WIFIPARAMS
 DESCRIPTOR.message_types_by_name['AccessToken'] = _ACCESSTOKEN
+DESCRIPTOR.message_types_by_name['ConnectionChange'] = _CONNECTIONCHANGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 WifiParams = _reflection.GeneratedProtocolMessageType('WifiParams', (_message.Message,), dict(
@@ -124,6 +191,13 @@ AccessToken = _reflection.GeneratedProtocolMessageType('AccessToken', (_message.
   # @@protoc_insertion_point(class_scope:AccessToken)
   ))
 _sym_db.RegisterMessage(AccessToken)
+
+ConnectionChange = _reflection.GeneratedProtocolMessageType('ConnectionChange', (_message.Message,), dict(
+  DESCRIPTOR = _CONNECTIONCHANGE,
+  __module__ = 'message_pb2'
+  # @@protoc_insertion_point(class_scope:ConnectionChange)
+  ))
+_sym_db.RegisterMessage(ConnectionChange)
 
 
 # @@protoc_insertion_point(module_scope)
