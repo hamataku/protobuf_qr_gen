@@ -2,7 +2,6 @@ from message_pb2 import WifiParams, AccessToken
 import qrcode
 
 wifiParams = WifiParams()
-wifiParams.advanced = False
 wifiParams.ssid = "aillis-mobile"
 wifiParams.passphrase = "GMFfgdug_/iS"
 wifiParams.dhcp = True

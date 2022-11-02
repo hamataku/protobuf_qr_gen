@@ -1,15 +1,14 @@
 syntax = "proto3";
 
 message WifiParams {
-bool advanced = 1;
-string ssid = 2;
-string passphrase = 3;
-bool dhcp = 4;
-string ip_addr = 5;
-string subnet = 6;
-string gateway = 7;
-string dns1 = 8;
-string dns2 = 9;
+string ssid = 1;
+string passphrase = 2;
+bool dhcp = 3;
+string ip_addr = 4;
+string subnet = 5;
+string gateway = 6;
+string dns1 = 7;
+string dns2 = 8;
 }
 
 message AccessToken {
